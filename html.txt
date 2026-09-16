@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJ Collection - Premium Lawn & Floral Print</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfbf9;
+            color: #1c1c1c;
+        }
+
+        /* Elegant Luxury Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 5%;
+            background-color: #0f0f0f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 1px solid #d4af37;
+        }
+
+        header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .cart-btn-header {
+            background: linear-gradient(135deg, #d4af37, #aa7c11);
+            color: #ffffff;
+            border: none;
+            padding: 6px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+            white-space: nowrap;
+        }
+
+        /* Luxury Hero Banner */
+        .hero {
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('IMG-20260915-WA0031.jpg') center/cover;
+            color: #fff;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 13px;
+            color: #e0e0e0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 24px;
+            background: transparent;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid #d4af37;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #d4af37;
+            color: #0f0f0f;
+        }
+
+        /* Boutique Product Grid */
+        .products {
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #111;
+            position: relative;
+            display: inline-block;
+        }
+
+        .products h2::after {
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: #d4af37;
+            position: absolute;
+            bottom: -6px;
+            left: 25%;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: #d4af37;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 4px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #222;
+            height: 38px;
+            overflow: hidden;
+        }
+
+        .price {
+            color: #b8860b;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 10px;
+            background: #111111;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #d4af37;
+            color: #0f0f0f;
+        }
+
+        /* Customer Reviews Styling */
+        .reviews-section {
+            padding: 40px 6%;
+            background-color: #f7f4ee;
+            text-align: center;
+            border-top: 1px solid #e5dfd3;
+        }
+
+        .reviews-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .review-card {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #eaeaea;
+            text-align: left;
+        }
+
+        .stars {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .review-card p {
+            font-size: 12px;
+            color: #444;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .review-card h4 {
+            font-size: 12px;
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+        /* Stylish Cart Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.75);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 22px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid #d4af37;
+        }
+
+        .close {
+            float: right;
+            font-size: 22px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .modal-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        #cart-items {
+            max-height: 160px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        #cart-items p {
+            padding: 6px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .payment-section {
+            margin: 12px 0;
+        }
+
+        .payment-section select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 11px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #0f0f0f;
+            color: #888;
+            font-size: 12px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">RJ Collection</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <button class="cart-btn-header" onclick="openCart()">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <h1>RJ Collection</h1>
+        <p>Exclusive Summer Floral & Lawn Collection</p>
+        <a href="#collection" class="btn">Shop New Arrivals</a>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="collection" class="products">
+        <h2>Our New Floral Arrivals</h2>
+        
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0031.jpg" alt="Maroon Floral Lawn">
+                <h3>Maroon Embroidered Suit (Art. 185)</h3>
+                <p class="price">Rs. 2999</p>
+                <button class="buy-btn" onclick="addToCart('Maroon Embroidered Suit (Art. 185)', 2999)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0029.jpg" alt="Peach Floral Lawn">
+                <h3>Peach Meadow Floral Lawn (Art. 186)</h3>
+                <p class="price">Rs. 2499</p>
+                <button class="buy-btn" onclick="addToCart('Peach Meadow Floral Lawn (Art. 186)', 2499)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0036.jpg" alt="Black Rose Print">
+                <h3>Black Rose Blossom Lawn (Art. 187)</h3>
+                <p class="price">Rs. 2499</p>
+                <button class="buy-btn" onclick="addToCart('Black Rose Blossom Lawn (Art. 187)', 2499)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0046.jpg" alt="Deep Red Plain Classic">
+                <h3>Deep Red Classic Lawn (Art. 188)</h3>
+                <p class="price">Rs. 2199</p>
+                <button class="buy-btn" onclick="addToCart('Deep Red Classic Lawn (Art. 188)', 2199)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0034.jpg" alt="Olive Green Floral">
+                <h3>Olive Green Daisy Blossom</h3>
+                <p class="price">Rs. 2499</p>
+                <button class="buy-btn" onclick="addToCart('Olive Green Daisy Blossom', 2499)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0044.jpg" alt="Black Pink Floral">
+                <h3>Black Vine Pink Floral Suit</h3>
+                <p class="price">Rs. 2499</p>
+                <button class="buy-btn" onclick="addToCart('Black Vine Pink Floral Suit', 2499)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0030.jpg" alt="Beige Multicolor Floral">
+                <h3>Beige Garden Vibrant Lawn</h3>
+                <p class="price">Rs. 2499</p>
+                <button class="buy-btn" onclick="addToCart('Beige Garden Vibrant Lawn', 2499)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="IMG-20260915-WA0028.jpg" alt="Red Traditional Geometric">
+                <h3>Red Ethnic Geometric Print</h3>
+                <p class="price">Rs. 2399</p>
+                <button class="buy-btn" onclick="addToCart('Red Ethnic Geometric Print', 2399)">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-grid">
+            
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Fabric ki quality bohot zabardast hai! Same picture jaisa suit mila. Delivery bhi fast thi."</p>
+                <h4>- Sana K. (Lahore)</h4>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"RJ Collection se pehli baar buy kiya, print aur colors bohot pyare hain. Strongly recommend!"</p>
+                <h4>- Ayesha M. (Karachi)</h4>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Lawn ka kapra bohot soft hai summer ke liye best hai. Packing bhi bohot achi thi."</p>
+                <h4>- Hira Fatima (Islamabad)</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal Window -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total: Rs. <span id="cart-total">0</span></h3>
+
+            <!-- Payment Options -->
+            <div class="payment-section">
+                <label><b>Select Payment Method:</b></label>
+                <select id="payment-method">
+                    <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                    <option value="JazzCash / EasyPaisa">JazzCash / EasyPaisa</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+            </div>
+
+            <button class="checkout-btn" onclick="sendOrderWhatsApp()">Confirm Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RJ Collection. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        let cart = [];
+
+        function addToCart(title, price) {
+            cart.push({ title, price });
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            let cartItemsDiv = document.getElementById('cart-items');
+            cartItemsDiv.innerHTML = '';
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsDiv.innerHTML += `<p>${index + 1}. ${item.title} - Rs. ${item.price}</p>`;
+            });
+            
+            document.getElementById('cart-total').innerText = total;
+        }
+
+        function openCart() {
+            document.getElementById('cart-modal').style.display = 'block';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').style.display = 'none';
+        }
+
+        function sendOrderWhatsApp() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+
+            let paymentMethod = document.getElementById('payment-method').value;
+            let message = "Hi RJ Collection! I want to place an order:\n\n";
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                message += `${index + 1}. ${item.title} (Rs. ${item.price})\n`;
+                total += item.price;
+            });
+
+            message += `\n*Total Amount:* Rs. ${total}`;
+            message += `\n*Payment Method:* ${paymentMethod}`;
+
+            let encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/923285113836?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
