@@ -1,2313 +1,2394 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>RJ Collection | Premium Lawn & Floral Print</title>  <link rel="preconnect" href="https://fonts.googleapis.com">  
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">  <style>  
-:root{  
-    --black:#111111;  
-    --dark:#181818;  
-    --gold:#c8a45d;  
-    --gold-light:#e7cf91;  
-    --cream:#fcfaf5;  
-    --white:#ffffff;  
-    --text:#222222;  
-    --muted:#777777;  
-    --border:#e8e1d5;  
-    --green:#25D366;  
-    --danger:#b33a3a;  
-}  
-  
-*{  
-    margin:0;  
-    padding:0;  
-    box-sizing:border-box;  
-}  
-  
-html{  
-    scroll-behavior:smooth;  
-}  
-  
-body{  
-    font-family:'Poppins',sans-serif;  
-    background:var(--cream);  
-    color:var(--text);  
-    line-height:1.6;  
-}  
-  
-button,  
-input,  
-textarea{  
-    font-family:inherit;  
-}  
-  
-button{  
-    cursor:pointer;  
-}  
-  
-a{  
-    text-decoration:none;  
-    color:inherit;  
-}  
-  
-/* =========================  
-   HEADER  
-========================= */  
-  
-header{  
-    position:sticky;  
-    top:0;  
-    z-index:1000;  
-    background:rgba(17,17,17,.97);  
-    color:white;  
-    border-bottom:1px solid rgba(200,164,93,.35);  
-}  
-  
-.header-inner{  
-    max-width:1200px;  
-    margin:auto;  
-    min-height:76px;  
-    padding:0 20px;  
-    display:flex;  
-    align-items:center;  
-    justify-content:space-between;  
-    gap:20px;  
-}  
-  
-.logo{  
-    font-family:'Playfair Display',serif;  
-    font-size:28px;  
-    font-weight:700;  
-    letter-spacing:1px;  
-    color:var(--gold-light);  
-    white-space:nowrap;  
-}  
-  
-.logo span{  
-    display:block;  
-    font-family:'Poppins',sans-serif;  
-    font-size:9px;  
-    letter-spacing:3px;  
-    text-align:center;  
-    color:#ddd;  
-    margin-top:-5px;  
-}  
-  
-nav{  
-    display:flex;  
-    align-items:center;  
-    gap:22px;  
-}  
-  
-nav a{  
-    font-size:13px;  
-    color:#eee;  
-    transition:.3s;  
-}  
-  
-nav a:hover{  
-    color:var(--gold-light);  
-}  
-  
-.header-actions{  
-    display:flex;  
-    align-items:center;  
-    gap:10px;  
-}  
-  
-.cart-btn,  
-.menu-btn{  
-    border:1px solid rgba(255,255,255,.25);  
-    background:transparent;  
-    color:white;  
-    padding:9px 13px;  
-    border-radius:5px;  
-}  
-  
-.cart-btn{  
-    position:relative;  
-}  
-  
-.cart-count{  
-    position:absolute;  
-    top:-8px;  
-    right:-8px;  
-    min-width:19px;  
-    height:19px;  
-    padding:0 4px;  
-    border-radius:50%;  
-    background:var(--gold);  
-    color:#111;  
-    font-size:10px;  
-    display:flex;  
-    align-items:center;  
-    justify-content:center;  
-    font-weight:700;  
-}  
-  
-.menu-btn{  
-    display:none;  
-}  
-  
-/* =========================  
-   HERO  
-========================= */  
-  
-.hero{  
-    min-height:600px;  
-    position:relative;  
-    display:flex;  
-    align-items:center;  
-    overflow:hidden;  
-    background:#111;  
-}  
-  
-.hero-bg{  
-    position:absolute;  
-    inset:0;  
-    background:  
-        linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.35),rgba(0,0,0,.15)),  
-        url("IMG-20260915-WA0031.jpg") center/cover no-repeat;  
-}  
-  
-.hero-content{  
-    position:relative;  
-    z-index:2;  
-    max-width:1200px;  
-    width:100%;  
-    margin:auto;  
-    padding:80px 25px;  
-    color:white;  
-}  
-  
-.hero-small{  
-    color:var(--gold-light);  
-    text-transform:uppercase;  
-    letter-spacing:4px;  
-    font-size:12px;  
-    margin-bottom:12px;  
-}  
-  
-.hero h1{  
-    font-family:'Playfair Display',serif;  
-    font-size:clamp(42px,7vw,78px);  
-    line-height:1.05;  
-    max-width:700px;  
-    margin-bottom:20px;  
-}  
-  
-.hero p{  
-    max-width:580px;  
-    color:#eee;  
-    font-size:15px;  
-    margin-bottom:30px;  
-}  
-  
-.hero-buttons{  
-    display:flex;  
-    gap:12px;  
-    flex-wrap:wrap;  
-}  
-  
-.btn{  
-    border:none;  
-    padding:13px 22px;  
-    border-radius:4px;  
-    font-size:13px;  
-    font-weight:600;  
-    transition:.3s;  
-}  
-  
-.btn-gold{  
-    background:var(--gold);  
-    color:#111;  
-}  
-  
-.btn-gold:hover{  
-    background:var(--gold-light);  
-    transform:translateY(-2px);  
-}  
-  
-.btn-outline{  
-    background:transparent;  
-    color:white;  
-    border:1px solid rgba(255,255,255,.6);  
-}  
-  
-.btn-outline:hover{  
-    background:white;  
-    color:#111;  
-}  
-  
-/* =========================  
-   TRUST STRIP  
-========================= */  
-  
-.trust{  
-    background:white;  
-    border-bottom:1px solid var(--border);  
-}  
-  
-.trust-inner{  
-    max-width:1200px;  
-    margin:auto;  
-    display:grid;  
-    grid-template-columns:repeat(4,1fr);  
-}  
-  
-.trust-item{  
-    padding:22px 15px;  
-    text-align:center;  
-    border-right:1px solid var(--border);  
-}  
-  
-.trust-item:last-child{  
-    border-right:none;  
-}  
-  
-.trust-icon{  
-    font-size:23px;  
-    margin-bottom:5px;  
-}  
-  
-.trust-item strong{  
-    display:block;  
-    font-size:12px;  
-}  
-  
-.trust-item span{  
-    font-size:10px;  
-    color:var(--muted);  
-}  
-  
-/* =========================  
-   GENERAL SECTION  
-========================= */  
-  
-.section{  
-    max-width:1200px;  
-    margin:auto;  
-    padding:80px 20px;  
-}  
-  
-.section-heading{  
-    text-align:center;  
-    margin-bottom:40px;  
-}  
-  
-.section-kicker{  
-    color:var(--gold);  
-    text-transform:uppercase;  
-    letter-spacing:3px;  
-    font-size:10px;  
-    font-weight:600;  
-}  
-  
-.section-heading h2{  
-    font-family:'Playfair Display',serif;  
-    font-size:38px;  
-    margin:6px 0;  
-}  
-  
-.section-heading p{  
-    color:var(--muted);  
-    font-size:13px;  
-}  
-  
-/* =========================  
-   SEARCH  
-========================= */  
-  
-.search-wrap{  
-    max-width:500px;  
-    margin:0 auto 35px;  
-    position:relative;  
-}  
-  
-.search-wrap input{  
-    width:100%;  
-    padding:14px 18px;  
-    border:1px solid var(--border);  
-    background:white;  
-    border-radius:4px;  
-    outline:none;  
-    font-size:13px;  
-}  
-  
-.search-wrap input:focus{  
-    border-color:var(--gold);  
-}  
-  
-/* =========================  
-   PRODUCTS  
-========================= */  
-  
-.products{  
-    display:grid;  
-    grid-template-columns:repeat(4,1fr);  
-    gap:22px;  
-}  
-  
-.product-card{  
-    background:white;  
-    border:1px solid var(--border);  
-    overflow:hidden;  
-    position:relative;  
-    transition:.35s;  
-    display:flex;  
-    flex-direction:column;  
-}  
-  
-.product-card:hover{  
-    transform:translateY(-6px);  
-    box-shadow:0 15px 35px rgba(0,0,0,.09);  
-}  
-  
-.product-image{  
-    position:relative;  
-    aspect-ratio:3/4;  
-    background:#eee9df;  
-    overflow:hidden;  
-}  
-  
-.product-image img{  
-    width:100%;  
-    height:100%;  
-    object-fit:cover;  
-    display:block;  
-    transition:.5s;  
-}  
-  
-.product-card:hover .product-image img{  
-    transform:scale(1.04);  
-}  
-  
-.badge{  
-    position:absolute;  
-    top:12px;  
-    left:12px;  
-    z-index:2;  
-    background:var(--black);  
-    color:white;  
-    padding:5px 9px;  
-    font-size:9px;  
-    text-transform:uppercase;  
-    letter-spacing:1px;  
-}  
-  
-.product-info{  
-    padding:16px;  
-    display:flex;  
-    flex-direction:column;  
-    flex:1;  
-}  
-  
-.product-category{  
-    color:var(--gold);  
-    font-size:9px;  
-    text-transform:uppercase;  
-    letter-spacing:1.5px;  
-    font-weight:600;  
-}  
-  
-.product-name{  
-    font-family:'Playfair Display',serif;  
-    font-size:20px;  
-    margin:4px 0;  
-}  
-  
-.product-description{  
-    font-size:11px;  
-    color:var(--muted);  
-    min-height:38px;  
-}  
-  
-.product-bottom{  
-    display:flex;  
-    justify-content:space-between;  
-    align-items:center;  
-    gap:8px;  
-    margin-top:15px;  
-}  
-  
-.price{  
-    font-size:17px;  
-    font-weight:600;  
-}  
-  
-.product-actions{  
-    display:grid;  
-    grid-template-columns:1fr 1fr;  
-    gap:7px;  
-    margin-top:12px;  
-}  
-  
-.product-actions button{  
-    border:1px solid var(--black);  
-    background:white;  
-    padding:9px 5px;  
-    font-size:10px;  
-    font-weight:600;  
-    border-radius:3px;  
-}  
-  
-.product-actions .order-btn{  
-    background:var(--black);  
-    color:white;  
-}  
-  
-.product-actions button:hover{  
-    opacity:.8;  
-}  
-  
-.no-products{  
-    grid-column:1/-1;  
-    text-align:center;  
-    padding:50px 20px;  
-    color:var(--muted);  
-    background:white;  
-    border:1px solid var(--border);  
-}  
-  
-/* =========================  
-   FEATURE SECTION  
-========================= */  
-  
-.features{  
-    background:#151515;  
-    color:white;  
-}  
-  
-.features .section-heading p{  
-    color:#aaa;  
-}  
-  
-.feature-grid{  
-    max-width:1200px;  
-    margin:auto;  
-    padding:0 20px 80px;  
-    display:grid;  
-    grid-template-columns:repeat(3,1fr);  
-    gap:20px;  
-}  
-  
-.feature{  
-    border:1px solid rgba(200,164,93,.25);  
-    padding:30px 20px;  
-    text-align:center;  
-}  
-  
-.feature-icon{  
-    font-size:30px;  
-    margin-bottom:12px;  
-}  
-  
-.feature h3{  
-    font-family:'Playfair Display',serif;  
-    color:var(--gold-light);  
-    margin-bottom:7px;  
-}  
-  
-.feature p{  
-    color:#bbb;  
-    font-size:11px;  
-}  
-  
-/* =========================  
-   REVIEWS  
-========================= */  
-  
-.review-form{  
-    max-width:650px;  
-    margin:0 auto 45px;  
-    background:white;  
-    border:1px solid var(--border);  
-    padding:25px;  
-}  
-  
-.review-form h3{  
-    font-family:'Playfair Display',serif;  
-    margin-bottom:15px;  
-}  
-  
-.form-group{  
-    margin-bottom:13px;  
-}  
-  
-.form-group input,  
-.form-group textarea{  
-    width:100%;  
-    border:1px solid var(--border);  
-    padding:11px;  
-    outline:none;  
-    font-size:12px;  
-    resize:vertical;  
-}  
-  
-.rating{  
-    display:flex;  
-    gap:6px;  
-    margin-bottom:15px;  
-}  
-  
-.rating button{  
-    border:none;  
-    background:#f2eee6;  
-    padding:7px 9px;  
-    font-size:15px;  
-}  
-  
-.rating button.active{  
-    background:var(--gold);  
-}  
-  
-.review-grid{  
-    display:grid;  
-    grid-template-columns:repeat(3,1fr);  
-    gap:20px;  
-}  
-  
-.review-card{  
-    background:white;  
-    border:1px solid var(--border);  
-    padding:22px;  
-}  
-  
-.review-stars{  
-    color:var(--gold);  
-    letter-spacing:2px;  
-    margin-bottom:8px;  
-}  
-  
-.review-card h4{  
-    font-family:'Playfair Display',serif;  
-}  
-  
-.review-card p{  
-    color:var(--muted);  
-    font-size:12px;  
-    margin-top:8px;  
-}  
-  
-/* =========================  
-   CONTACT  
-========================= */  
-  
-.contact{  
-    background:#f2eee6;  
-}  
-  
-.contact-box{  
-    max-width:900px;  
-    margin:auto;  
-    background:white;  
-    padding:45px 25px;  
-    text-align:center;  
-    border:1px solid var(--border);  
-}  
-  
-.contact-box h2{  
-    font-family:'Playfair Display',serif;  
-    font-size:36px;  
-}  
-  
-.contact-box p{  
-    color:var(--muted);  
-    font-size:13px;  
-    margin:10px auto 22px;  
-    max-width:600px;  
-}  
-  
-.whatsapp-main{  
-    display:inline-flex;  
-    align-items:center;  
-    gap:8px;  
-    background:var(--green);  
-    color:white;  
-    padding:13px 24px;  
-    border-radius:4px;  
-    font-weight:600;  
-    font-size:13px;  
-}  
-  
-/* =========================  
-   FOOTER  
-========================= */  
-  
-footer{  
-    background:#111;  
-    color:white;  
-    text-align:center;  
-    padding:35px 20px;  
-}  
-  
-.footer-logo{  
-    font-family:'Playfair Display',serif;  
-    font-size:27px;  
-    color:var(--gold-light);  
-}  
-  
-footer p{  
-    color:#888;  
-    font-size:10px;  
-    margin-top:7px;  
-}  
-  
-/* =========================  
-   FLOATING WHATSAPP  
-========================= */  
-  
-.whatsapp-float{  
-    position:fixed;  
-    right:18px;  
-    bottom:18px;  
-    width:54px;  
-    height:54px;  
-    border-radius:50%;  
-    background:var(--green);  
-    color:white;  
-    display:flex;  
-    align-items:center;  
-    justify-content:center;  
-    font-size:26px;  
-    box-shadow:0 7px 20px rgba(0,0,0,.25);  
-    z-index:900;  
-}  
-  
-/* =========================  
-   MODAL  
-========================= */  
-  
-.modal{  
-    display:none;  
-    position:fixed;  
-    inset:0;  
-    background:rgba(0,0,0,.65);  
-    z-index:2000;  
-    padding:20px;  
-    align-items:center;  
-    justify-content:center;  
-}  
-  
-.modal.show{  
-    display:flex;  
-}  
-  
-.modal-box{  
-    background:white;  
-    width:100%;  
-    max-width:600px;  
-    max-height:90vh;  
-    overflow:auto;  
-    padding:25px;  
-    position:relative;  
-}  
-  
-.modal-close{  
-    position:absolute;  
-    top:12px;  
-    right:15px;  
-    border:none;  
-    background:none;  
-    font-size:25px;  
-}  
-  
-.modal-title{  
-    font-family:'Playfair Display',serif;  
-    font-size:28px;  
-    margin-bottom:20px;  
-}  
-  
-.cart-item{  
-    display:grid;  
-    grid-template-columns:70px 1fr auto;  
-    gap:12px;  
-    align-items:center;  
-    border-bottom:1px solid var(--border);  
-    padding:12px 0;  
-}  
-  
-.cart-item img{  
-    width:70px;  
-    height:80px;  
-    object-fit:cover;  
-}  
-  
-.cart-item-name{  
-    font-family:'Playfair Display',serif;  
-    font-size:16px;  
-}  
-  
-.cart-item-price{  
-    font-size:12px;  
-    color:var(--muted);  
-}  
-  
-.qty{  
-    display:flex;  
-    align-items:center;  
-    gap:8px;  
-    margin-top:5px;  
-}  
-  
-.qty button{  
-    width:24px;  
-    height:24px;  
-    border:1px solid var(--border);  
-    background:white;  
-}  
-  
-.remove-btn{  
-    border:none;  
-    background:none;  
-    color:var(--danger);  
-    font-size:11px;  
-}  
-  
-.cart-total{  
-    display:flex;  
-    justify-content:space-between;  
-    padding:18px 0;  
-    font-weight:600;  
-}  
-  
-.checkout-input{  
-    width:100%;  
-    padding:12px;  
-    border:1px solid var(--border);  
-    margin-bottom:10px;  
-    outline:none;  
-    font-size:12px;  
-}  
-  
-.checkout-btn{  
-    width:100%;  
-    border:none;  
-    background:var(--green);  
-    color:white;  
-    padding:13px;  
-    font-weight:600;  
-}  
-  
-/* =========================  
-   TOAST  
-========================= */  
-  
-.toast{  
-    position:fixed;  
-    left:50%;  
-    bottom:25px;  
-    transform:translateX(-50%) translateY(100px);  
-    background:#111;  
-    color:white;  
-    padding:12px 18px;  
-    border-radius:4px;  
-    font-size:12px;  
-    z-index:3000;  
-    opacity:0;  
-    transition:.3s;  
-}  
-  
-.toast.show{  
-    opacity:1;  
-    transform:translateX(-50%) translateY(0);  
-}  
-  
-/* =========================  
-   MOBILE  
-========================= */  
-  
-@media(max-width:900px){  
-  
-    nav{  
-        display:none;  
-        position:absolute;  
-        top:76px;  
-        left:0;  
-        right:0;  
-        background:#111;  
-        padding:18px;  
-        flex-direction:column;  
-        align-items:flex-start;  
-        border-top:1px solid rgba(255,255,255,.1);  
-    }  
-  
-    nav.open{  
-        display:flex;  
-    }  
-  
-    .menu-btn{  
-        display:block;  
-    }  
-  
-    .products{  
-        grid-template-columns:repeat(2,1fr);  
-    }  
-  
-    .review-grid{  
-        grid-template-columns:1fr;  
-    }  
-  
-    .trust-inner{  
-        grid-template-columns:repeat(2,1fr);  
-    }  
-  
-    .trust-item:nth-child(2){  
-        border-right:none;  
-    }  
-  
-    .trust-item:nth-child(3),  
-    .trust-item:nth-child(4){  
-        border-top:1px solid var(--border);  
-    }  
-  
-    .feature-grid{  
-        grid-template-columns:1fr;  
-    }  
-}  
-  
-@media(max-width:550px){  
-  
-    .header-inner{  
-        min-height:68px;  
-        padding:0 12px;  
-    }  
-  
-    .logo{  
-        font-size:23px;  
-    }  
-  
-    .logo span{  
-        font-size:7px;  
-    }  
-  
-    .hero{  
-        min-height:530px;  
-    }  
-  
-    .hero-content{  
-        padding:60px 18px;  
-    }  
-  
-    .hero h1{  
-        font-size:43px;  
-    }  
-  
-    .section{  
-        padding:55px 13px;  
-    }  
-  
-    .section-heading h2{  
-        font-size:31px;  
-    }  
-  
-    .products{  
-        grid-template-columns:repeat(2,1fr);  
-        gap:10px;  
-    }  
-  
-    .product-info{  
-        padding:11px;  
-    }  
-  
-    .product-name{  
-        font-size:16px;  
-    }  
-  
-    .product-description{  
-        font-size:9px;  
-    }  
-  
-    .price{  
-        font-size:14px;  
-    }  
-  
-    .product-actions{  
-        grid-template-columns:1fr;  
-    }  
-  
-    .product-actions button{  
-        padding:8px 3px;  
-    }  
-  
-    .trust-item{  
-        padding:17px 8px;  
-    }  
-}  
-  
-@media(max-width:380px){  
-  
-    .products{  
-        grid-template-columns:1fr;  
-    }  
-  
-    .product-image{  
-        aspect-ratio:1/1.15;  
-    }  
-}  
-</style>  </head>  <body>  <!-- =========================  
-     HEADER  
-========================= -->  <header>  
-    <div class="header-inner">  <a href="#home" class="logo">  
-        RJ Collection  
-        <span>PREMIUM FASHION</span>  
-    </a>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <nav id="navMenu">  
-        <a href="#home">Home</a>  
-        <a href="#new-arrivals">New Arrivals</a>  
-        <a href="#best-sellers">Best Sellers</a>  
-        <a href="#collection">Collection</a>  
-        <a href="#reviews">Reviews</a>  
-        <a href="#contact">Contact</a>  
-    </nav>  
+<title>RJ Collection | Premium Lawn & Floral Print</title>
 
-    <div class="header-actions">  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <button class="cart-btn" onclick="openCart()">  
-            🛒 Cart  
-            <span class="cart-count" id="cartCount">0</span>  
-        </button>  
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        <button class="menu-btn" onclick="toggleMenu()">  
-            ☰  
-        </button>  
+<style>
+:root{
+    --black:#111111;
+    --dark:#181818;
+    --gold:#c8a45d;
+    --gold-light:#e7cf91;
+    --cream:#fcfaf5;
+    --white:#ffffff;
+    --text:#222222;
+    --muted:#777777;
+    --border:#e5e5e5;
+    --whatsapp:#25D366;
+    --danger:#d9534f;
+}
 
-    </div>  
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-</div>
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+}
 
-</header>  <!-- =========================  
-     HERO  
-========================= -->  <section class="hero" id="home">  <div class="hero-bg"></div>  
+img{
+    max-width:100%;
+    display:block;
+}
 
-<div class="hero-content">  
+button,
+input,
+textarea{
+    font-family:inherit;
+}
 
-    <div class="hero-small">  
-        RJ Collection  
-    </div>  
+button{
+    cursor:pointer;
+}
 
-    <h1>  
-        Elegance That<br>  
-        Feels Beautiful.  
-    </h1>  
+/* HEADER */
 
-    <p>  
-        Discover premium lawn, floral prints and elegant  
-        embroidered outfits carefully selected for your style.  
-    </p>  
+header{
+    background:var(--black);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
+}
 
-    <div class="hero-buttons">  
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
 
-        <a href="#new-arrivals" class="btn btn-gold">  
-            Shop New Arrivals  
-        </a>  
+.logo{
+    color:white;
+    text-decoration:none;
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    font-weight:700;
+    white-space:nowrap;
+}
 
-        <a href="#collection" class="btn btn-outline">  
-            Explore Collection  
-        </a>  
+.logo span{
+    color:var(--gold);
+}
 
-    </div>  
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
 
-</div>
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
 
-</section>  <!-- =========================  
-     TRUST  
-========================= -->  <section class="trust">  <div class="trust-inner">  
+.nav-links a:hover{
+    color:var(--gold-light);
+}
 
-    <div class="trust-item">  
-        <div class="trust-icon">✨</div>  
-        <strong>Premium Quality</strong>  
-        <span>Carefully selected fabrics</span>  
-    </div>  
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
-    <div class="trust-item">  
-        <div class="trust-icon">🚚</div>  
-        <strong>Easy Ordering</strong>  
-        <span>Simple WhatsApp order</span>  
-    </div>  
+.cart-btn,
+.menu-btn{
+    border:none;
+    color:white;
+    background:transparent;
+}
 
-    <div class="trust-item">  
-        <div class="trust-icon">💬</div>  
-        <strong>Quick Response</strong>  
-        <span>Contact us anytime</span>  
-    </div>  
+.cart-btn{
+    padding:9px 12px;
+    border:1px solid #444;
+    border-radius:8px;
+    font-size:14px;
+}
 
-    <div class="trust-item">  
-        <div class="trust-icon">❤️</div>  
-        <strong>Made With Care</strong>  
-        <span>Style you will love</span>  
-    </div>  
+.cart-count{
+    background:var(--gold);
+    color:#111;
+    min-width:20px;
+    height:20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:11px;
+    font-weight:600;
+    margin-left:4px;
+}
+
+.menu-btn{
+    display:none;
+    font-size:25px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("IMG-20260915-WA0031.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:80px 20px;
+    color:white;
+}
+
+.hero-content h1{
+    max-width:700px;
+    font-family:'Playfair Display',serif;
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:var(--gold-light);
+}
+
+.hero-content p{
+    max-width:600px;
+    font-size:17px;
+    line-height:1.8;
+    color:#eee;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:7px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:1px solid white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#111;
+}
+
+/* TRUST */
+
+.trust-strip{
+    background:white;
+    border-bottom:1px solid var(--border);
+}
+
+.trust-container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.trust-item{
+    text-align:center;
+    padding:10px;
+}
+
+.trust-item .icon{
+    font-size:25px;
+    margin-bottom:6px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:14px;
+}
+
+.trust-item span{
+    font-size:12px;
+    color:var(--muted);
+}
+
+/* SECTIONS */
+
+section{
+    scroll-margin-top:80px;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.section-title h2 span{
+    color:var(--gold);
+}
+
+.section-title p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:500px;
+    margin:0 auto 30px;
+    display:flex;
+}
+
+.search-box input{
+    width:100%;
+    padding:13px 16px;
+    border:1px solid var(--border);
+    border-radius:7px 0 0 7px;
+    outline:none;
+    background:white;
+}
+
+.search-box button{
+    padding:0 18px;
+    border:none;
+    background:var(--black);
+    color:white;
+    border-radius:0 7px 7px 0;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.09);
+}
+
+.image-box{
+    height:330px;
+    background:#f3f1ed;
+    position:relative;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.product-card:hover .image-box img{
+    transform:scale(1.04);
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:var(--black);
+    color:white;
+    padding:6px 9px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:600;
+    z-index:2;
+}
+
+.product-info{
+    padding:16px;
+}
+
+.product-info h3{
+    font-size:15px;
+    margin-bottom:7px;
+    min-height:45px;
+}
+
+.price{
+    color:var(--gold);
+    font-weight:600;
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.product-actions{
+    display:flex;
+    gap:8px;
+}
+
+.product-actions button{
+    flex:1;
+    border:none;
+    padding:10px 7px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.add-cart{
+    background:#111;
+    color:white;
+}
+
+.order-now{
+    background:var(--gold);
+    color:#111;
+}
+
+.empty-products{
+    grid-column:1/-1;
+    text-align:center;
+    padding:40px;
+    color:var(--muted);
+}
+
+/* FEATURES */
+
+.features-section{
+    background:#111;
+    color:white;
+}
+
+.features{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    text-align:center;
+    padding:25px;
+    border:1px solid #333;
+    border-radius:10px;
+}
+
+.feature-icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-family:'Playfair Display',serif;
+    color:var(--gold-light);
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#ccc;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* REVIEWS */
+
+.reviews-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.review-form,
+.review-list{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+}
+
+.review-form h3,
+.review-list h3{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    margin-bottom:18px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:11px 13px;
+    border:1px solid var(--border);
+    border-radius:6px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.rating{
+    display:flex;
+    gap:5px;
+    margin-bottom:15px;
+}
+
+.star{
+    border:none;
+    background:transparent;
+    font-size:26px;
+    color:#ccc;
+}
+
+.star.active{
+    color:#e2b33d;
+}
+
+.submit-review{
+    width:100%;
+    border:none;
+    background:var(--black);
+    color:white;
+    padding:12px;
+    border-radius:6px;
+}
+
+.review-item{
+    border-bottom:1px solid var(--border);
+    padding:15px 0;
+}
+
+.review-item:last-child{
+    border-bottom:none;
+}
+
+.review-top{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.review-name{
+    font-weight:600;
+}
+
+.review-stars{
+    color:#e2b33d;
+}
+
+.review-text{
+    font-size:13px;
+    color:#666;
+    line-height:1.7;
+    margin-top:7px;
+}
+
+.no-reviews{
+    color:#888;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-section{
+    background:#f2eee5;
+}
+
+.contact-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.contact-card .icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.contact-card h3{
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.contact-card p{
+    font-size:13px;
+    color:#777;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+}
+
+.footer-main{
+    max-width:1200px;
+    margin:auto;
+    padding:55px 20px 30px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+.footer-main p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.footer-main h3{
+    color:var(--gold-light);
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin-bottom:9px;
+}
+
+.footer-links a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    padding:18px 20px;
+    text-align:center;
+    color:#888;
+    font-size:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--whatsapp);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:2000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:600px;
+    max-height:90vh;
+    overflow:auto;
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    position:relative;
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.modal-header h2{
+    font-family:'Playfair Display',serif;
+}
+
+.close-btn{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:#eee;
+    font-size:20px;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.cart-item img{
+    width:65px;
+    height:75px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.cart-item-info h4{
+    font-size:13px;
+    margin-bottom:4px;
+}
+
+.cart-item-info p{
+    font-size:12px;
+    color:#777;
+}
+
+.qty-controls{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.qty-controls button{
+    width:25px;
+    height:25px;
+    border:none;
+    background:#eee;
+    border-radius:4px;
+}
+
+.remove-item{
+    border:none;
+    background:transparent;
+    color:var(--danger);
+    font-size:18px;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    font-size:18px;
+    font-weight:600;
+    margin:20px 0;
+}
+
+.checkout-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:7px;
+    background:var(--whatsapp);
+    color:white;
+    font-weight:600;
+}
+
+.empty-cart{
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:90px;
+    transform:translateX(-50%) translateY(20px);
+    background:#111;
+    color:white;
+    padding:12px 20px;
+    border-radius:7px;
+    font-size:13px;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:3000;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        background:#111;
+        display:none;
+        flex-direction:column;
+        padding:20px;
+        border-top:1px solid #333;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .navbar{
+        padding:12px 14px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .cart-btn{
+        padding:7px 9px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero-content{
+        padding:60px 18px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .section{
+        padding:50px 14px;
+    }
+
+    .section-title h2{
+        font-size:31px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .image-box{
+        height:230px;
+    }
+
+    .product-info{
+        padding:11px;
+    }
+
+    .product-info h3{
+        font-size:12px;
+        min-height:38px;
+    }
+
+    .price{
+        font-size:15px;
+    }
+
+    .product-actions{
+        flex-direction:column;
+    }
+
+    .trust-container{
+        gap:5px;
+        padding:12px;
+    }
+
+    .trust-item{
+        padding:8px 3px;
+    }
+
+    .trust-item strong{
+        font-size:11px;
+    }
+
+    .trust-item span{
+        font-size:9px;
+    }
+
+    .reviews-wrap{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .whatsapp-float{
+        width:52px;
+        height:52px;
+        right:15px;
+        bottom:15px;
+    }
+}
+</style>
+
+<!-- FIREBASE -->
+<script type="module">
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+import { getAnalytics }
+from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCGydKLzvyaadcfj7nEmbKzRkV4dwPoS1_I",
+    authDomain: "rj-collection-ae773.firebaseapp.com",
+    projectId: "rj-collection-ae773",
+    storageBucket: "rj-collection-ae773.firebasestorage.app",
+    messagingSenderId: "1007116737122",
+    appId: "1:1007116737122:web:f2212d7ff492c2ce5f4f3b",
+    measurementId: "G-4RT8T8HTZS"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+RJ <span>Collection</span>
+</a>
+
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#new-arrivals">New Arrivals</a>
+<a href="#best-sellers">Best Sellers</a>
+<a href="#collection">Collection</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="nav-actions">
+
+<button class="cart-btn" onclick="openCart()">
+🛒 Cart
+<span class="cart-count" id="cartCount">0</span>
+</button>
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
 
 </div>
 
-</section>  <!-- =========================  
-     NEW ARRIVALS  
-========================= -->  <section class="section" id="new-arrivals">  <div class="section-heading">  
+</div>
 
-    <div class="section-kicker">  
-        Fresh Collection  
-    </div>  
+</header>
 
-    <h2>New Arrivals</h2>  
 
-    <p>  
-        Discover our latest styles and beautiful new designs.  
-    </p>  
+<!-- HERO -->
 
-</div>  
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Elegant Fashion for
+<span>Every Occasion</span>
+</h1>
+
+<p>
+Discover beautiful lawn, floral prints and elegant Pakistani
+fashion at RJ Collection. Quality designs made for your style.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#new-arrivals" class="btn btn-gold">
+Shop New Arrivals
+</a>
+
+<a href="#collection" class="btn btn-outline">
+View Collection
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<div class="trust-strip">
+
+<div class="trust-container">
+
+<div class="trust-item">
+<div class="icon">✨</div>
+<strong>Premium Quality</strong>
+<span>Carefully selected fabrics</span>
+</div>
+
+<div class="trust-item">
+<div class="icon">🚚</div>
+<strong>Easy Ordering</strong>
+<span>Order directly on WhatsApp</span>
+</div>
+
+<div class="trust-item">
+<div class="icon">💎</div>
+<strong>Elegant Designs</strong>
+<span>Stylish & graceful collection</span>
+</div>
+
+<div class="trust-item">
+<div class="icon">💬</div>
+<strong>Customer Support</strong>
+<span>We're here to help</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NEW ARRIVALS -->
+
+<section class="section" id="new-arrivals">
+
+<div class="section-title">
+
+<h2>New <span>Arrivals</span></h2>
+
+<p>
+Fresh styles • Latest designs • Premium quality
+</p>
+
+</div>
 
 <div class="products" id="newProducts"></div>
 
-</section>  <!-- =========================  
-     BEST SELLERS  
-========================= -->  <section class="section" id="best-sellers">  <div class="section-heading">  
+</section>
 
-    <div class="section-kicker">  
-        Customer Favorites  
-    </div>  
 
-    <h2>Best Sellers</h2>  
+<!-- BEST SELLERS -->
 
-    <p>  
-        Beautiful styles loved by our customers.  
-    </p>  
+<section class="section" id="best-sellers">
 
-</div>  
+<div class="section-title">
+
+<h2>Best <span>Sellers</span></h2>
+
+<p>
+Customer favorites from RJ Collection
+</p>
+
+</div>
 
 <div class="products" id="bestProducts"></div>
 
-</section>  <!-- =========================  
-     COLLECTION  
-========================= -->  <section class="section" id="collection">  <div class="section-heading">  
+</section>
 
-    <div class="section-kicker">  
-        RJ Collection  
-    </div>  
 
-    <h2>Our Collection</h2>  
+<!-- COLLECTION -->
 
-    <p>  
-        Find your favorite print, color and style.  
-    </p>  
+<section class="section" id="collection">
 
-</div>  
+<div class="section-title">
 
-<div class="search-wrap">  
+<h2>Our <span>Collection</span></h2>
 
-    <input  
-        type="search"  
-        id="searchInput"  
-        placeholder="Search dresses, lawn, floral..."  
-    >  
+<p>
+Explore our beautiful lawn and floral prints
+</p>
 
-</div>  
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search your favorite dress..."
+oninput="searchProducts()"
+>
+
+<button onclick="searchProducts()">
+🔍
+</button>
+
+</div>
 
 <div class="products" id="collectionProducts"></div>
 
-</section>  <!-- =========================  
-     FEATURES  
-========================= -->  <section class="features">  <div class="section">  
-
-    <div class="section-heading">  
-
-        <div class="section-kicker">  
-            Why RJ Collection  
-        </div>  
-
-        <h2>Luxury Items • Lovely Feeling</h2>  
-
-        <p>  
-            Every design is selected to bring elegance and confidence.  
-        </p>  
-
-    </div>  
-
-</div>  
-
-<div class="feature-grid">  
-
-    <div class="feature">  
-        <div class="feature-icon">👗</div>  
-        <h3>Elegant Designs</h3>  
-        <p>  
-            Stylish prints, beautiful colors and graceful designs  
-            for everyday and special occasions.  
-        </p>  
-    </div>  
-
-    <div class="feature">  
-        <div class="feature-icon">✨</div>  
-        <h3>Premium Look</h3>  
-        <p>  
-            A carefully selected collection with a refined,  
-            beautiful and premium appearance.  
-        </p>  
-    </div>  
-
-    <div class="feature">  
-        <div class="feature-icon">❤️</div>  
-        <h3>Lovely Feeling</h3>  
-        <p>  
-            Fashion that makes you feel confident, comfortable  
-            and beautifully yourself.  
-        </p>  
-    </div>  
-
-</div>
-
-</section>  <!-- =========================  
-     REVIEWS  
-========================= -->  <section class="section" id="reviews">  <div class="section-heading">  
-
-    <div class="section-kicker">  
-        Customer Love  
-    </div>  
-
-    <h2>Customer Reviews</h2>  
-
-    <p>  
-        We would love to hear about your RJ Collection experience.  
-    </p>  
-
-</div>  
+</section>
 
 
-<div class="review-form">  
+<!-- FEATURES -->
 
-    <h3>Write Your Review</h3>  
+<section class="features-section">
 
-    <div class="form-group">  
-        <input  
-            type="text"  
-            id="reviewName"  
-            placeholder="Your Name"  
-        >  
-    </div>  
+<div class="features">
 
-    <div class="rating" id="ratingButtons">  
+<div class="feature">
 
-        <button data-rating="1">★</button>  
-        <button data-rating="2">★</button>  
-        <button data-rating="3">★</button>  
-        <button data-rating="4">★</button>  
-        <button data-rating="5">★</button>  
+<div class="feature-icon">🌸</div>
 
-    </div>  
+<h3>Beautiful Prints</h3>
 
-    <div class="form-group">  
-        <textarea  
-            id="reviewText"  
-            rows="4"  
-            placeholder="Write your review..."  
-        ></textarea>  
-    </div>  
-
-    <button class="btn btn-gold" onclick="submitReview()">  
-        Submit Review  
-    </button>  
-
-</div>  
-
-
-<div class="review-grid" id="reviewGrid"></div>
-
-</section>  <!-- =========================  
-     CONTACT  
-========================= -->  <section class="contact" id="contact">  <div class="section">  
-
-    <div class="contact-box">  
-
-        <div class="section-kicker">  
-            Get In Touch  
-        </div>  
-
-        <h2>Ready To Order?</h2>  
-
-        <p>  
-            Choose your favorite dress and send us a WhatsApp message.  
-            We will help you with your order.  
-        </p>  
-
-        <a  
-            class="whatsapp-main"  
-            href="https://wa.me/923460487310?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20order%20from%20RJ%20Collection."  
-            target="_blank"  
-        >  
-            💬 Order on WhatsApp  
-        </a>  
-
-    </div>  
-
-</div>
-
-</section>  <!-- =========================  
-     FOOTER  
-========================= -->  <footer>  <div class="footer-logo">  
-    RJ Collection  
-</div>  
-
-<p>  
-    Premium Lawn • Floral Prints • Elegant Fashion  
-</p>  
-
-<p>  
-    © 2026 RJ Collection. All Rights Reserved.  
+<p>
+Elegant floral and modern prints designed
+for a graceful look.
 </p>
 
-</footer>  <!-- =========================  
-     WHATSAPP FLOAT  
-========================= -->  <a
-class="whatsapp-float"
-href="https://wa.me/923460487310?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20order%20from%20RJ%20Collection."
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">👗</div>
+
+<h3>Premium Fashion</h3>
+
+<p>
+Stylish dresses with quality fabric and
+beautiful finishing.
+</p>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">❤️</div>
+
+<h3>Made With Care</h3>
+
+<p>
+Every design is selected with love for
+our RJ Collection customers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section" id="reviews">
+
+<div class="section-title">
+
+<h2>Customer <span>Reviews</span></h2>
+
+<p>
+Share your experience with RJ Collection
+</p>
+
+</div>
+
+<div class="reviews-wrap">
+
+<div class="review-form">
+
+<h3>Leave a Review</h3>
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="reviewName"
+placeholder="Enter your name"
+>
+
+</div>
+
+<div class="form-group">
+
+<label>Your Rating</label>
+
+<div class="rating" id="rating">
+
+<button class="star" onclick="setRating(1)">★</button>
+<button class="star" onclick="setRating(2)">★</button>
+<button class="star" onclick="setRating(3)">★</button>
+<button class="star" onclick="setRating(4)">★</button>
+<button class="star" onclick="setRating(5)">★</button>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Your Review</label>
+
+<textarea
+id="reviewText"
+placeholder="Write your experience..."
+></textarea>
+
+</div>
+
+<button
+class="submit-review"
+onclick="submitReview()"
+>
+Submit Review
+</button>
+
+</div>
+
+
+<div class="review-list">
+
+<h3>What Customers Say</h3>
+
+<div id="reviewList"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="section">
+
+<div class="section-title">
+
+<h2>Contact <span>RJ Collection</span></h2>
+
+<p>
+We're happy to help you with your order
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="icon">📱</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+923460487310
+</p>
+
+<br>
+
+<a
+href="https://wa.me/923460487310"
 target="_blank"
-aria-label="WhatsApp"
+class="btn btn-gold"
+>
+Chat on WhatsApp
+</a>
 
-> 
+</div>
 
+
+<div class="contact-card">
+
+<div class="icon">🛍️</div>
+
+<h3>Online Shopping</h3>
+
+<p>
+Select your favorite dress and
+place your order easily.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">💖</div>
+
+<h3>RJ Collection</h3>
+
+<p>
+Premium Lawn • Floral Prints •
+Elegant Fashion
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-main">
+
+<div>
+
+<div class="footer-logo">
+RJ <span>Collection</span>
+</div>
+
+<p>
+Premium lawn and floral print collection
+for elegant and stylish women.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul class="footer-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#new-arrivals">New Arrivals</a>
+</li>
+
+<li>
+<a href="#best-sellers">Best Sellers</a>
+</li>
+
+<li>
+<a href="#collection">Collection</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Customer</h3>
+
+<ul class="footer-links">
+
+<li>
+<a href="#reviews">Reviews</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+<li>
+<a href="https://wa.me/923460487310" target="_blank">
+WhatsApp Order
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 RJ Collection. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/923460487310"
+target="_blank"
+title="Order on WhatsApp"
+>
 💬
+</a>
 
-</a>  <!-- =========================  
-     CART MODAL  
-========================= -->  <div class="modal" id="cartModal">  <div class="modal-box">  
 
-    <button class="modal-close" onclick="closeCart()">  
-        ×  
-    </button>  
+<!-- CART MODAL -->
 
-    <div class="modal-title">  
-        Your Cart  
-    </div>  
+<div class="modal" id="cartModal">
 
-    <div id="cartItems"></div>  
+<div class="modal-box">
 
-    <div class="cart-total">  
-        <span>Total</span>  
-        <span id="cartTotal">Rs. 0</span>  
-    </div>  
+<div class="modal-header">
 
-    <button  
-        class="checkout-btn"  
-        onclick="openCheckout()"  
-    >  
-        Continue to WhatsApp Order  
-    </button>  
+<h2>Your Cart</h2>
+
+<button class="close-btn" onclick="closeCart()">
+×
+</button>
 
 </div>
 
-</div>  <!-- =========================  
-     CHECKOUT MODAL  
-========================= -->  <div class="modal" id="checkoutModal">  <div class="modal-box">  
+<div id="cartItems"></div>
 
-    <button class="modal-close" onclick="closeCheckout()">  
-        ×  
-    </button>  
+<div class="cart-total">
 
-    <div class="modal-title">  
-        Order Details  
-    </div>  
+<span>Total</span>
 
-    <input  
-        class="checkout-input"  
-        id="customerName"  
-        placeholder="Your Name"  
-    >  
-
-    <input  
-        class="checkout-input"  
-        id="customerPhone"  
-        placeholder="Phone Number"  
-    >  
-
-    <textarea  
-        class="checkout-input"  
-        id="customerAddress"  
-        rows="4"  
-        placeholder="Delivery Address"  
-    ></textarea>  
-
-    <button  
-        class="checkout-btn"  
-        onclick="sendWhatsAppOrder()"  
-    >  
-        Send Order on WhatsApp  
-    </button>  
+<span id="cartTotal">
+Rs. 0
+</span>
 
 </div>
 
-</div>  <!-- =========================  
-     TOAST  
-========================= -->  <div class="toast" id="toast"></div>  <script>  
-  
-/* =========================================================  
-   RJ COLLECTION PRODUCTS  
-========================================================= */  
-  
-const products = [  
-  
-    /* =========================  
-       NEW ARRIVALS  
-    ========================= */  
-  
-    {  
-        id:"new1",  
-        section:"new",  
-        name:"Plan 2PC",  
-        category:"2PC Suit",  
-        price:2200,  
-        image:"IMG-20260915-WA0025.jpg",  
-        description:"Elegant Plan 2PC suit with a graceful and stylish look.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new2",  
-        section:"new",  
-        name:"Plan 2PC With Printed Dupatta",  
-        category:"2PC Suit",  
-        price:2700,  
-        image:"IMG-20260915-WA0026.jpg",  
-        description:"Beautiful Plan 2PC with printed dupatta for an elegant look.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new3",  
-        section:"new",  
-        name:"Plan 2PC With Patches",  
-        category:"2PC Suit",  
-        price:2500,  
-        image:"IMG-20260915-WA0042.jpg",  
-        description:"Stylish Plan 2PC with beautiful patches and elegant detailing.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new4",  
-        section:"new",  
-        name:"Elegant Dupatta",  
-        category:"Dupatta",  
-        price:2000,  
-        image:"IMG_20260922_111821.png",  
-        description:"Elegant dupatta with a beautiful premium look.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new5",  
-        section:"new",  
-        name:"Pink 3PC Suit",  
-        category:"3PC Lawn",  
-        price:3000,  
-        image:"IMG_20260922_111839.png",  
-        description:"Beautiful pink 3PC suit for a graceful look.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new6",  
-        section:"new",  
-        name:"Printed Shirt & Trouser",  
-        category:"2PC Suit",  
-        price:2500,  
-        image:"IMG_20260922_111900.png",  
-        description:"Stylish printed shirt and trouser combination.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new7",  
-        section:"new",  
-        name:"Plain Dress With Patches",  
-        category:"Elegant Dress",  
-        price:2850,  
-        image:"IMG_20260922_111924.png",  
-        description:"Plain dress with beautiful center panel and patches.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new8",  
-        section:"new",  
-        name:"Allover Printed 2PC",  
-        category:"2PC Suit",  
-        price:2200,  
-        image:"IMG_20260922_112002.png",  
-        description:"Beautiful allover print 2PC suit for everyday style.",  
-        badge:"New"  
-    },  
-  
-    {  
-        id:"new9",  
-        section:"new",  
-        name:"3PC Lawn Embroidered Dress",  
-        category:"3PC Lawn",  
-        price:3500,  
-        image:"IMG_20260922_112032.png",  
-        description:"3PC lawn dress with beautiful embroidery and dupatta.",  
-        badge:"Premium"  
-    },  
-  
-  
-    /* =========================  
-       BEST SELLERS  
-    ========================= */  
-  
-    {  
-        id:"best1",  
-        section:"best",  
-        name:"Maroon Embroidered Suit",  
-        category:"Embroidered Suit",  
-        price:2999,  
-        image:"IMG-20260915-WA0031.jpg",  
-        description:"Rich maroon embroidered suit with an elegant finish.",  
-        badge:"Popular"  
-    },  
-  
-    {  
-        id:"best2",  
-        section:"best",  
-        name:"Peach Meadow Floral Lawn",  
-        category:"Floral Lawn",  
-        price:2499,  
-        image:"IMG-20260915-WA0029.jpg",  
-        description:"Soft peach floral lawn with a fresh feminine look.",  
-        badge:"Popular"  
-    },  
-  
-    {  
-        id:"best3",  
-        section:"best",  
-        name:"Black Rose Blossom Lawn",  
-        category:"Printed Lawn",  
-        price:2499,  
-        image:"IMG-20260915-WA0036.jpg",  
-        description:"Beautiful black base with attractive rose blossom print.",  
-        badge:"Popular"  
-    },  
-  
-  
-    /* =========================  
-       COLLECTION  
-    ========================= */  
-  
-    {  
-        id:"collection1",  
-        section:"collection",  
-        name:"Deep Red Classic Lawn",  
-        category:"Classic Lawn",  
-        price:2199,  
-        image:"IMG-20260915-WA0046.jpg",  
-        description:"Deep red classic lawn design for a graceful style.",  
-        badge:"Collection"  
-    },  
-  
-    {  
-        id:"collection2",  
-        section:"collection",  
-        name:"Olive Green Daisy Blossom",  
-        category:"Floral Print",  
-        price:2499,  
-        image:"IMG-20260915-WA0034.jpg",  
-        description:"Elegant olive green floral design with daisy blossom print.",  
-        badge:"Collection"  
-    },  
-  
-    {  
-        id:"collection3",  
-        section:"collection",  
-        name:"Black Vine Pink Floral Suit",  
-        category:"Floral Suit",  
-        price:2499,  
-        image:"IMG-20260915-WA0044.jpg",  
-        description:"Black base with beautiful pink floral vine print.",  
-        badge:"Collection"  
-    },  
-  
-    {  
-        id:"collection4",  
-        section:"collection",  
-        name:"Beige Garden Vibrant Lawn",  
-        category:"Printed Lawn",  
-        price:2499,  
-        image:"IMG-20260915-WA0030.jpg",  
-        description:"Elegant beige garden print with vibrant floral details.",  
-        badge:"Collection"  
-    }  
-  
-];  
-  
-  
-/* =========================================================  
-   VARIABLES  
-========================================================= */  
-  
-let cart = JSON.parse(localStorage.getItem("rjCollectionCart") || "[]");  
-  
-let selectedRating = 5;  
-  
-  
-/* =========================================================  
-   HELPER  
-========================================================= */  
-  
-function money(amount){  
-    return "Rs. " + Number(amount).toLocaleString("en-PK");  
-}  
-  
-  
-/* =========================================================  
-   PRODUCT CARD  
-========================================================= */  
-  
-function productCard(product){  
-  
-    return `  
-        <article class="product-card">  
-  
-            <div class="product-image">  
-  
-                <span class="badge">  
-                    ${product.badge}  
-                </span>  
-  
-                <img  
-                    src="${product.image}"  
-                    alt="${product.name}"  
-                    loading="lazy"  
-                    onerror="this.style.opacity='0.15';"  
-                >  
-  
-            </div>  
-  
-            <div class="product-info">  
-  
-                <div class="product-category">  
-                    ${product.category}  
-                </div>  
-  
-                <div class="product-name">  
-                    ${product.name}  
-                </div>  
-  
-                <div class="product-description">  
-                    ${product.description}  
-                </div>  
-  
-                <div class="product-bottom">  
-  
-                    <div class="price">  
-                        ${money(product.price)}  
-                    </div>  
-  
-                </div>  
-  
-                <div class="product-actions">  
-  
-                    <button  
-                        onclick="addToCart('${product.id}')"  
-                    >  
-                        Add to Cart  
-                    </button>  
-  
-                    <button  
-                        class="order-btn"  
-                        onclick="quickOrder('${product.id}')"  
-                    >  
-                        Order Now  
-                    </button>  
-  
-                </div>  
-  
-            </div>  
-  
-        </article>  
-    `;  
-}  
-  
-  
-/* =========================================================  
-   RENDER PRODUCTS  
-========================================================= */  
-      
-    function renderProducts(){  
-      
-        const searchInput = document.getElementById("searchInput");  
-      
-        const search = searchInput  
-            ? searchInput.value.trim().toLowerCase()  
-            : "";  
-      
-        const filtered = products.filter(product => {  
-      
-            if(!search){  
-                return true;  
-            }  
-      
-            return (  
-                product.name.toLowerCase().includes(search) ||  
-                product.category.toLowerCase().includes(search) ||  
-                product.description.toLowerCase().includes(search)  
-            );  
-      
-        });  
-      
-      
-        const newProducts = filtered.filter(  
-            product => product.section === "new"  
-        );  
-      
-        const bestProducts = filtered.filter(  
-            product => product.section === "best"  
-        );  
-      
-        const collectionProducts = filtered.filter(  
-            product => product.section === "collection"  
-        );  
-      
-      
-        document.getElementById("newProducts").innerHTML =  
-            newProducts.length  
-            ? newProducts.map(productCard).join("")  
-            : `<div class="no-products">No products found.</div>`;  
-      
-      
-        document.getElementById("bestProducts").innerHTML =  
-            bestProducts.length  
-            ? bestProducts.map(productCard).join("")  
-            : `<div class="no-products">No products found.</div>`;  
-      
-      
-        document.getElementById("collectionProducts").innerHTML =  
-            collectionProducts.length  
-            ? collectionProducts.map(productCard).join("")  
-            : `<div class="no-products">No products found.</div>`;  
-    }  
-      
-      
-    /* =========================================================  
-       CART  
-    ========================================================= */  
-      
-    function saveCart(){  
-      
-        localStorage.setItem(  
-            "rjCollectionCart",  
-            JSON.stringify(cart)  
-        );  
-      
-        updateCartCount();  
-    }  
-      
-      
-    function updateCartCount(){  
-      
-        const count = cart.reduce(  
-            (total,item) => total + item.quantity,  
-            0  
-        );  
-      
-        document.getElementById("cartCount").textContent = count;  
-    }  
-      
-      
-    function findProduct(id){  
-      
-        return products.find(  
-            product => product.id === id  
-        );  
-    }  
-      
-      
-    function addToCart(id){  
-      
-        const product = findProduct(id);  
-      
-        if(!product){  
-            return;  
-        }  
-      
-        const existing = cart.find(  
-            item => item.id === id  
-        );  
-      
-        if(existing){  
-            existing.quantity++;  
-        }else{  
-            cart.push({  
-                id:id,  
-                quantity:1  
-            });  
-        }  
-      
-        saveCart();  
-      
-        showToast(  
-            product.name + " added to cart"  
-        );  
-    }  
-      
-      
-    function removeFromCart(id){  
-      
-        cart = cart.filter(  
-            item => item.id !== id  
-        );  
-      
-        saveCart();  
-        renderCart();  
-    }  
-      
-      
-    function changeQuantity(id,change){  
-      
-        const item = cart.find(  
-            item => item.id === id  
-        );  
-      
-        if(!item){  
-            return;  
-        }  
-      
-        item.quantity += change;  
-      
-        if(item.quantity <= 0){  
-            cart = cart.filter(  
-                cartItem => cartItem.id !== id  
-            );  
-        }  
-      
-        saveCart();  
-        renderCart();  
-    }  
-      
-      
-    function cartTotal(){  
-      
-        return cart.reduce(  
-            (total,item) => {  
-      
-                const product = findProduct(item.id);  
-      
-                if(!product){  
-                    return total;  
-                }  
-      
-                return total +  
-                    (product.price * item.quantity);  
-      
-            },  
-            0  
-        );  
-    }  
-      
-      
-    function renderCart(){  
-      
-        const container =  
-            document.getElementById("cartItems");  
-      
-        if(cart.length === 0){  
-      
-            container.innerHTML = `  
-                <div class="no-products">  
-                    Your cart is empty.  
-                </div>  
-            `;  
-      
-            document.getElementById("cartTotal").textContent =  
-                money(0);  
-      
-            return;  
-        }  
-      
-      
-        container.innerHTML = cart.map(item => {  
-      
-            const product = findProduct(item.id);  
-      
-            if(!product){  
-                return "";  
-            }  
-      
-            return `  
-                <div class="cart-item">  
-      
-                    <img  
-                        src="${product.image}"  
-                        alt="${product.name}"  
-                    >  
-      
-                    <div>  
-      
-                        <div class="cart-item-name">  
-                            ${product.name}  
-                        </div>  
-      
-                        <div class="cart-item-price">  
-                            ${money(product.price)}  
-                        </div>  
-      
-                        <div class="qty">  
-      
-                            <button  
-                                onclick="changeQuantity('${product.id}',-1)"  
-                            >  
-                                −  
-                            </button>  
-      
-                            <span>  
-                                ${item.quantity}  
-                            </span>  
-      
-                            <button  
-                                onclick="changeQuantity('${product.id}',1)"  
-                            >  
-                                +  
-                            </button>  
-      
-                        </div>  
-      
-                    </div>  
-      
-                    <button  
-                        class="remove-btn"  
-                        onclick="removeFromCart('${product.id}')"  
-                    >  
-                        Remove  
-                    </button>  
-      
-                </div>  
-            `;  
-      
-        }).join("");  
-      
-      
-        document.getElementById("cartTotal").textContent =  
-            money(cartTotal());  
-    }  
-      
-      
-    /* =========================================================  
-       CART MODAL  
-    ========================================================= */  
-      
-    function openCart(){  
-      
-        renderCart();  
-      
-        document  
-            .getElementById("cartModal")  
-            .classList.add("show");  
-    }  
-      
-      
-    function closeCart(){  
-      
-        document  
-            .getElementById("cartModal")  
-            .classList.remove("show");  
-    }  
-      
-      
-    /* =========================================================  
-       QUICK ORDER  
-    ========================================================= */  
-      
-    function quickOrder(id){  
-      
-        const product = findProduct(id);  
-      
-        if(!product){  
-            return;  
-        }  
-      
-        const message =  
-            "Assalam o Alaikum, I want to order:%0A%0A" +  
-            "Product: " + encodeURIComponent(product.name) +  
-            "%0A" +  
-            "Price: " + encodeURIComponent(money(product.price)) +  
-            "%0A%0A" +  
-            "Please share order details.";  
-      
-        window.open(  
-            "https://wa.me/923460487310?text=" + message,  
-            "_blank"  
-        );  
-    }  
-      
-      
-    /* =========================================================  
-       CHECKOUT  
-    ========================================================= */  
-      
-    function openCheckout(){  
-      
-        if(cart.length === 0){  
-      
-            showToast("Your cart is empty.");  
-      
-            return;  
-        }  
-      
-        closeCart();  
-      
-        document  
-            .getElementById("checkoutModal")  
-            .classList.add("show");  
-    }  
-      
-      
-    function closeCheckout(){  
-      
-        document  
-            .getElementById("checkoutModal")  
-            .classList.remove("show");  
-    }  
-      
-      
-    function sendWhatsAppOrder(){  
-      
-        const name =  
-            document.getElementById("customerName").value.trim();  
-      
-        const phone =  
-            document.getElementById("customerPhone").value.trim();  
-      
-        const address =  
-            document.getElementById("customerAddress").value.trim();  
-      
-      
-        if(!name || !phone || !address){  
-      
-            showToast(  
-                "Please fill all order details."  
-            );  
-      
-            return;  
-        }  
-      
-      
-        let message =  
-            "Assalam o Alaikum, I want to place an order from RJ Collection.%0A%0A";  
-      
-        message +=  
-            "Customer Name: " +  
-            encodeURIComponent(name) +  
-            "%0A";  
-      
-        message +=  
-            "Phone: " +  
-            encodeURIComponent(phone) +  
-            "%0A";  
-      
-        message +=  
-            "Address: " +  
-            encodeURIComponent(address) +  
-            "%0A%0A";  
-      
-      
-        message += "Order:%0A";  
-      
-      
-        cart.forEach(item => {  
-      
-            const product = findProduct(item.id);  
-      
-            if(product){  
-      
-                message +=  
-                    encodeURIComponent(product.name) +  
-                    " × " +  
-                    item.quantity +  
-                    " = " +  
-                    encodeURIComponent(  
-                        money(product.price * item.quantity)  
-                    ) +  
-                    "%0A";  
-            }  
-      
-        });  
-      
-      
-        message +=  
-            "%0ATotal: " +  
-            encodeURIComponent(  
-                money(cartTotal())  
-            );  
-      
-      
-        window.open(  
-            "https://wa.me/923460487310?text=" + message,  
-            "_blank"  
-        );  
-    }  
-      
-      
-    /* =========================================================  
-       REVIEWS  
-    ========================================================= */  
-      
-    function getReviews(){  
-      
-        return JSON.parse(  
-            localStorage.getItem("rjCollectionReviews") || "[]"  
-        );  
-    }  
-      
-      
-    function saveReviews(reviews){  
-      
-        localStorage.setItem(  
-            "rjCollectionReviews",  
-            JSON.stringify(reviews)  
-        );  
-    }  
-      
-      
-    function renderReviews(){  
-      
-        const reviews = getReviews();  
-      
-        const grid =  
-            document.getElementById("reviewGrid");  
-      
-      
-        if(reviews.length === 0){  
-      
-            grid.innerHTML = `  
-                <div class="review-card">  
-                    <div class="review-stars">★★★★★</div>  
-                    <h4>Be Our First Reviewer</h4>  
-                    <p>  
-                        Your review can help other customers  
-                        discover RJ Collection.  
-                    </p>  
-                </div>  
-            `;  
-      
-            return;  
-        }  
-      
-      
-        grid.innerHTML = reviews.map(review => {  
-      
-            return `  
-                <div class="review-card">  
-      
-                    <div class="review-stars">  
-                        ${"★".repeat(review.rating)}  
-                    </div>  
-      
-                    <h4>  
-                        ${review.name}  
-                    </h4>  
-      
-                    <p>  
-                        ${review.text}  
-                    </p>  
-      
-                </div>  
-            `;  
-      
-        }).join("");  
-    }  
-      
-      
-    function setupRating(){  
-      
-        const buttons =  
-            document.querySelectorAll(  
-                "#ratingButtons button"  
-            );  
-      
-      
-        buttons.forEach(button => {  
-      
-            button.addEventListener(  
-                "click",  
-                function(){  
-      
-                    selectedRating =  
-                        Number(this.dataset.rating);  
-      
-                    buttons.forEach(btn =>  
-                        btn.classList.remove("active")  
-                    );  
-      
-                    buttons.forEach(btn => {  
-      
-                        if(  
-                            Number(btn.dataset.rating)  
-                            <= selectedRating  
-                        ){  
-                            btn.classList.add("active");  
-                        }  
-      
-                    });  
-      
-                }  
-            );  
-      
-        });  
-      
-      
-        buttons.forEach(button => {  
-      
-            if(  
-                Number(button.dataset.rating)  
-                <= selectedRating  
-            ){  
-                button.classList.add("active");  
-            }  
-      
-        });  
-    }  
-      
-      
-    function submitReview(){  
-      
-        const name =  
-            document.getElementById("reviewName")  
-            .value  
-            .trim();  
-      
-        const text =  
-            document.getElementById("reviewText")  
-            .value  
-            .trim();  
-      
-      
-        if(!name || !text){  
-      
-            showToast(  
-                "Please enter your name and review."  
-            );  
-      
-            return;  
-        }  
-      
-      
-        const reviews = getReviews();  
-      
-      
-        reviews.unshift({  
-      
-            name:name,  
-            text:text,  
-            rating:selectedRating  
-      
-        });  
-      
-      
-        saveReviews(reviews);  
-      
-        document.getElementById("reviewName").value = "";  
-        document.getElementById("reviewText").value = "";  
-      
-        renderReviews();  
-      
-        showToast(  
-            "Thank you for your review ❤️"  
-        );  
-    }  
-      
-      
-    /* =========================================================  
-       MOBILE MENU  
-    ========================================================= */  
-      
-    function toggleMenu(){  
-      
-        document  
-            .getElementById("navMenu")  
-            .classList.toggle("open");  
-    }  
-      
-      
-    /* =========================================================  
-       TOAST  
-    ========================================================= */  
-      
-    function showToast(message){  
-      
-        const toast =  
-            document.getElementById("toast");  
-      
-        toast.textContent = message;  
-      
-        toast.classList.add("show");  
-      
-        setTimeout(() => {  
-      
-            toast.classList.remove("show");  
-      
-        },2500);  
-    }  
-      
-      
-    /* =========================================================  
-       SEARCH  
-    ========================================================= */  
-      
-    document  
-        .getElementById("searchInput")  
-        .addEventListener(  
-            "input",  
-            renderProducts  
-        );  
-      
-      
-    /* =========================================================  
-       CLOSE MODAL WHEN CLICKING OUTSIDE  
-    ========================================================= */  
-      
-    document  
-        .getElementById("cartModal")  
-        .addEventListener(  
-            "click",  
-            function(event){  
-      
-                if(event.target === this){  
-                    closeCart();  
-                }  
-      
-            }  
-        );  
-      
-      
-    document  
-        .getElementById("checkoutModal")  
-        .addEventListener(  
-            "click",  
-            function(event){  
-      
-                if(event.target === this){  
-                    closeCheckout();  
-                }  
-      
-            }  
-        );  
-      
-      
-    /* =========================================================  
-       START WEBSITE  
-    ========================================================= */  
-      
-    document.addEventListener(  
-        "DOMContentLoaded",  
-        function(){  
-      
-            renderProducts();  
-      
-            renderReviews();  
-      
-            updateCartCount();  
-      
-            setupRating();  
-      
-        }  
-    );  
-      
-    </script>  </body>  
-    </html><a href="#reviews">Reviews</a>
+<button
+class="checkout-btn"
+onclick="checkoutWhatsApp()"
+>
+Order on WhatsApp
+</button>
+
+</div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+Added to cart
+</div>
+
+
+<script>
+
+/* =========================
+   PRODUCT DATA
+========================= */
+
+const newProducts = [
+
+{
+id:"new1",
+name:"Plan 2PC",
+price:2200,
+image:"IMG-20260915-WA0025.jpg",
+badge:"NEW"
+},
+
+{
+id:"new2",
+name:"Plan 2PC With Printed Dupatta",
+price:2700,
+image:"IMG-20260915-WA0026.jpg",
+badge:"NEW"
+},
+
+{
+id:"new3",
+name:"Plan 2PC With Patches",
+price:2500,
+image:"IMG-20260915-WA0042.jpg",
+badge:"NEW"
+},
+
+{
+id:"new4",
+name:"Elegant Dupatta",
+price:2000,
+image:"IMG_20260922_111821.png",
+badge:"NEW"
+},
+
+{
+id:"new5",
+name:"Pink 3PC Suit",
+price:3000,
+image:"IMG_20260922_111839.png",
+badge:"NEW"
+},
+
+{
+id:"new6",
+name:"Printed Shirt & Trouser",
+price:2500,
+image:"IMG_20260922_111900.png",
+badge:"NEW"
+},
+
+{
+id:"new7",
+name:"Plain Dress With Patches",
+price:2850,
+image:"IMG_20260922_111924.png",
+badge:"NEW"
+},
+
+{
+id:"new8",
+name:"Allover Printed 2PC",
+price:2200,
+image:"IMG_20260922_112002.png",
+badge:"NEW"
+},
+
+{
+id:"new9",
+name:"3PC Lawn Embroidered Dress",
+price:3500,
+image:"IMG_20260922_112032.png",
+badge:"NEW"
+}
+
+];
+
+
+const bestProducts = [
+
+{
+id:"best1",
+name:"Maroon Embroidered Suit",
+price:2999,
+image:"IMG-20260915-WA0031.jpg",
+badge:"BEST SELLER"
+},
+
+{
+id:"best2",
+name:"Peach Meadow Floral Lawn",
+price:2499,
+image:"IMG-20260915-WA0029.jpg",
+badge:"BEST SELLER"
+},
+
+{
+id:"best3",
+name:"Black Rose Blossom Lawn",
+price:2499,
+image:"IMG-20260915-WA0036.jpg",
+badge:"BEST SELLER"
+}
+
+];
+
+
+const collectionProducts = [
+
+{
+id:"collection1",
+name:"Deep Red Classic Lawn",
+price:2199,
+image:"IMG-20260915-WA0046.jpg"
+},
+
+{
+id:"collection2",
+name:"Olive Green Daisy Blossom",
+price:2499,
+image:"IMG-20260915-WA0034.jpg"
+},
+
+{
+id:"collection3",
+name:"Black Vine Pink Floral Suit",
+price:2499,
+image:"IMG-20260915-WA0044.jpg"
+},
+
+{
+id:"collection4",
+name:"Beige Garden Vibrant Lawn",
+price:2499,
+image:"IMG-20260915-WA0030.jpg"
+}
+
+];
+
+
+/* =========================
+   CART
+========================= */
+
+let cart =
+JSON.parse(localStorage.getItem("rjCart")) || [];
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+function productCard(product){
+
+return `
+
+<div class="product-card">
+
+<div class="image-box">
+
+${product.badge ? `
+<div class="badge">
+${product.badge}
+</div>
+` : ""}
+
+<img
+src="${product.image}"
+alt="${product.name}"
+loading="lazy"
+onerror="this.src='https://via.placeholder.com/600x750?text=RJ+Collection'"
+>
+
+</div>
+
+<div class="product-info">
+
+<h3>
+${product.name}
+</h3>
+
+<div class="price">
+Rs. ${product.price.toLocaleString()}
+</div>
+
+<div class="product-actions">
+
+<button
+class="add-cart"
+onclick='addToCart(${JSON.stringify(product)})'
+>
+🛒 Add Cart
+</button>
+
+<button
+class="order-now"
+onclick='quickOrder(${JSON.stringify(product)})'
+>
+WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+
+const newBox =
+document.getElementById("newProducts");
+
+const bestBox =
+document.getElementById("bestProducts");
+
+const collectionBox =
+document.getElementById("collectionProducts");
+
+
+newBox.innerHTML =
+newProducts.map(productCard).join("");
+
+
+bestBox.innerHTML =
+bestProducts.map(productCard).join("");
+
+
+collectionBox.innerHTML =
+collectionProducts.map(productCard).join("");
+
+}
+
+
+renderProducts();
+
+
+/* =========================
+   ADD CART
+========================= */
+
+function addToCart(product){
+
+const existing =
+cart.find(item => item.id === product.id);
+
+if(existing){
+
+existing.qty++;
+
+}else{
+
+cart.push({
+...product,
+qty:1
+});
+
+}
+
+saveCart();
+
+updateCartCount();
+
+showToast("Dress cart mein add ho gayi ❤️");
+
+}
+
+
+/* =========================
+   SAVE CART
+========================= */
+
+function saveCart(){
+
+localStorage.setItem(
+"rjCart",
+JSON.stringify(cart)
+);
+
+}
+
+
+/* =========================
+   CART COUNT
+========================= */
+
+function updateCartCount(){
+
+const count =
+cart.reduce(
+(total,item) => total + item.qty,
+0
+);
+
+document.getElementById("cartCount")
+.innerText = count;
+
+}
+
+updateCartCount();
+
+
+/* =========================
+   OPEN CART
+========================= */
+
+function openCart(){
+
+renderCart();
+
+document
+.getElementById("cartModal")
+.classList.add("show");
+
+}
+
+
+/* =========================
+   CLOSE CART
+========================= */
+
+function closeCart(){
+
+document
+.getElementById("cartModal")
+.classList.remove("show");
+
+}
+
+
+/* =========================
+   RENDER CART
+========================= */
+
+function renderCart(){
+
+const box =
+document.getElementById("cartItems");
+
+if(cart.length === 0){
+
+box.innerHTML = `
+
+<div class="empty-cart">
+
+🛒 Your cart is empty.
+
+<br><br>
+
+Add your favorite dress first.
+
+</div>
+
+`;
+
+document.getElementById("cartTotal")
+.innerText = "Rs. 0";
+
+return;
+
+}
+
+
+box.innerHTML = cart.map((item,index)=>`
+
+<div class="cart-item">
+
+<img
+src="${item.image}"
+alt="${item.name}"
+onerror="this.src='https://via.placeholder.com/100x120?text=Dress'"
+>
+
+<div class="cart-item-info">
+
+<h4>
+${item.name}
+</h4>
+
+<p>
+Rs. ${item.price.toLocaleString()}
+</p>
+
+</div>
+
+<div class="qty-controls">
+
+<button onclick="changeQty(${index},-1)">
+−
+</button>
+
+<span>
+${item.qty}
+</span>
+
+<button onclick="changeQty(${index},1)">
++
+</button>
+
+</div>
+
+<button
+class="remove-item"
+onclick="removeCartItem(${index})"
+>
+×
+</button>
+
+</div>
+
+`).join("");
+
+
+const total =
+cart.reduce(
+(sum,item) => sum + item.price * item.qty,
+0
+);
+
+document.getElementById("cartTotal")
+.innerText =
+"Rs. " + total.toLocaleString();
+
+}
+
+
+/* =========================
+   CHANGE QUANTITY
+========================= */
+
+function changeQty(index,change){
+
+cart[index].qty += change;
+
+if(cart[index].qty <= 0){
+
+cart.splice(index,1);
+
+}
+
+saveCart();
+
+updateCartCount();
+
+renderCart();
+
+}
+
+
+/* =========================
+   REMOVE ITEM
+========================= */
+
+function removeCartItem(index){
+
+cart.splice(index,1);
+
+saveCart();
+
+updateCartCount();
+
+renderCart();
+
+}
+
+
+/* =========================
+   WHATSAPP CHECKOUT
+========================= */
+
+function checkoutWhatsApp(){
+
+if(cart.length === 0){
+
+showToast("Cart empty hai");
+
+return;
+
+}
+
+let message =
+"Assalam o Alaikum RJ Collection,%0A%0A";
+
+message +=
+"Main ye products order karna chahti/chahta hoon:%0A%0A";
+
+
+cart.forEach((item,index)=>{
+
+message +=
+`${index+1}. ${item.name} - Rs. ${item.price} x ${item.qty}%0A`;
+
+});
+
+
+const total =
+cart.reduce(
+(sum,item) =>
+sum + item.price * item.qty,
+0
+);
+
+
+message +=
+`%0ATotal: Rs. ${total}%0A%0A`;
+
+message +=
+"Please order confirm kar dein. Shukriya ❤️";
+
+
+window.open(
+"https://wa.me/923460487310?text=" + message,
+"_blank"
+);
+
+}
+
+
+/* =========================
+   QUICK ORDER
+========================= */
+
+function quickOrder(product){
+
+const message =
+`Assalam o Alaikum RJ Collection,%0A%0A` +
+`Mujhe ye dress order karni hai:%0A%0A` +
+`Product: ${product.name}%0A` +
+`Price: Rs. ${product.price}%0A%0A` +
+`Please order details bata dein. Shukriya ❤️`;
+
+window.open(
+"https://wa.me/923460487310?text=" + message,
+"_blank"
+);
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchProducts(){
+
+const query =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
+
+const box =
+document.getElementById("collectionProducts");
+
+const filtered =
+collectionProducts.filter(product =>
+product.name.toLowerCase().includes(query)
+);
+
+if(filtered.length === 0){
+
+box.innerHTML = `
+
+<div class="empty-products">
+
+😔 No dress found.
+
+</div>
+
+`;
+
+return;
+
+}
+
+box.innerHTML =
+filtered.map(productCard).join("");
+
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+link.addEventListener("click",()=>{
+
+document
+.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+let selectedRating = 0;
+
+
+function setRating(number){
+
+selectedRating = number;
+
+const stars =
+document.querySelectorAll(".star");
+
+stars.forEach((star,index)=>{
+
+star.classList.toggle(
+"active",
+index < number
+);
+
+});
+
+}
+
+
+function submitReview(){
+
+const name =
+document
+.getElementById("reviewName")
+.value
+.trim();
+
+const text =
+document
+.getElementById("reviewText")
+.value
+.trim();
+
+
+if(!name){
+
+showToast("Apna naam likhein");
+
+return;
+
+}
+
+
+if(selectedRating === 0){
+
+showToast("Rating select karein ⭐");
+
+return;
+
+}
+
+
+if(!text){
+
+showToast("Review likhein");
+
+return;
+
+}
+
+
+const reviews =
+JSON.parse(
+localStorage.getItem("rjReviews")
+) || [];
+
+
+reviews.unshift({
+
+name:name,
+
+rating:selectedRating,
+
+text:text,
+
+date:new Date().toLocaleDateString()
+
+});
+
+
+localStorage.setItem(
+"rjReviews",
+JSON.stringify(reviews)
+);
+
+
+document.getElementById("reviewName")
+.value = "";
+
+document.getElementById("reviewText")
+.value = "";
+
+selectedRating = 0;
+
+document
+.querySelectorAll(".star")
+.forEach(star =>
+star.classList.remove("active")
+);
+
+
+renderReviews();
+
+showToast("Review submit ho gaya ❤️");
+
+}
+
+
+/* =========================
+   SHOW REVIEWS
+========================= */
+
+function renderReviews(){
+
+const box =
+document.getElementById("reviewList");
+
+const reviews =
+JSON.parse(
+localStorage.getItem("rjReviews")
+) || [];
+
+
+if(reviews.length === 0){
+
+box.innerHTML = `
+
+<div class="no-reviews">
+
+Abhi koi review nahi hai.
+Sab se pehla review aap dein ❤️
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+box.innerHTML =
+reviews.map(review=>`
+
+<div class="review-item">
+
+<div class="review-top">
+
+<div class="review-name">
+${escapeHTML(review.name)}
+</div>
+
+<div class="review-stars">
+${"★".repeat(review.rating)}
+${"☆".repeat(5-review.rating)}
+</div>
+
+</div>
+
+<div class="review-text">
+${escapeHTML(review.text)}
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+function escapeHTML(text){
+
+const div =
+document.createElement("div");
+
+div.textContent = text;
+
+return div.innerHTML;
+
+}
+
+
+renderReviews();
+
+
+/* =========================
+   TOAST
+========================= */
+
+let toastTimer;
+
+
+function showToast(message){
+
+const toast =
+document.getElementById("toast");
+
+toast.innerText = message;
+
+toast.classList.add("show");
+
+
+clearTimeout(toastTimer);
+
+
+toastTimer =
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},2500);
+
+}
+
+
+/* =========================
+   CLOSE MODAL OUTSIDE
+========================= */
+
+document
+.getElementById("cartModal")
+.addEventListener("click",function(e){
+
+if(e.target === this){
+
+closeCart();
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
